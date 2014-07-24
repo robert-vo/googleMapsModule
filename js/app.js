@@ -6,5 +6,5 @@ var googlemaps = angular.module('googlemaps', ['adaptive.googlemaps']);
 //if the url sanitization is ignored, angularJS will stick 'unsafe:' as a prefix to the geo and maps URIs.
 googlemaps.config(function($compileProvider){
       $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|geo|maps):/);
-      //For older versions of AngularJS, use urlSanitizationWhitelist instead of aHrefSanitizationWhitelist
+      //For AngularJS < 1.2, use urlSanitizationWhitelist instead of aHrefSanitizationWhitelist
     });
